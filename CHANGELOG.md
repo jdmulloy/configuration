@@ -81,6 +81,7 @@
 
 - Role: server_utils
   - Install "vim", not "vim-tiny".
+  - Update to only do things for debian varient environment
 
 - Role: edxapp
   - Added GOOGLE_ANALYTICS_TRACKING_ID setting for inserting GA tracking into emails generated via ACE.
@@ -438,6 +439,9 @@
 - Role: security
   - Changed SECURITY_UPGRADE_ON_ANSIBLE to only apply security updates.  If you want to retain the behavior of running safe-upgrade,
     you should switch to using SAFE_UPGRADE_ON_ANSIBLE.
+
+- Role: splunkforwarder
+  - Updated the role so the splunkforwarder can be installed on Amazon Linux OS environment, which is a RHEL variant
 
 - Role: mongo_2_6
   - Added `MONGO_AUTH` to turn authentication on/off. Auth is now enabled by default, and was previously disabled by default.
